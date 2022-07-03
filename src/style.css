@@ -5,7 +5,7 @@
 html{font-size: 62.5%;}
 
 *{font-family:'Roboto regular 400', sans-serif;
- 	margin: 0;
+	margin: 0;
  	padding: 0;
 	box-sizing: border-box;}
 
@@ -29,8 +29,13 @@ a{text-decoration: none;}
 
 .text-dorado{color: #FFCC00;}
 
+.text-red{color: red;}
+
+.text-violet{color: #AF33CA;}
 
 
+.row{
+	padding: 0;}
 
 
 
@@ -99,17 +104,14 @@ a{text-decoration: none;}
 
 
 
-
-
-
-
-
-
-
 /*NAV BAR MIN-1200PX*//*NAV BAR MIN-1200PX*//*NAV BAR MIN-1200PX*//*NAV BAR MIN-1200PX*//*NAV BAR MIN-1200PX*//*NAV BAR MIN-1200PX*/
 
-.header{width: 100%;
+.header{width: 100vw;
 		position: fixed;}
+
+.vw{width: 100vw;}		
+
+.mg-button{margin-right: 20px;}
 
 .logo{
 		height: 60px;
@@ -132,17 +134,6 @@ a{text-decoration: none;}
 }	
 
 
-/*NAV BAR MAX-1200PX*//*NAV BAR MAX-1200PX*//*NAV BAR MAX-1200PX*//*NAV BAR MAX-1200PX*//*NAV BAR MAX-1200PX*/
-
-@media(max-width: 1200px){
-	body{}
-
-	.nav-rep-text-center{
-		text-align: center;
-		line-height: 60px;}
-}
-
-
 
 
 
@@ -156,11 +147,12 @@ a{text-decoration: none;}
 /*INICIO MIN-1200PX*//*INICIO MIN-1200PX*//*INICIO MIN-1200PX*//*INICIO MIN-1200PX*//*INICIO MIN-1200PX*//*INICIO MIN-1200PX*//*INICIO MIN-1200PX*/
 
 .img-inicio{padding-top: 35px;
-	width: 100%;}
+	width: 100vw;}
    
 .h1-index{font-size: 4rem;}
 
-.section-inicio{	    
+.section-inicio{	
+		width: 100vw;    
 	    text-align: center;
 	    font-size: 4rem;
 	    background: #343434;}
@@ -170,15 +162,17 @@ a{text-decoration: none;}
 
 .contenedor{
 		background-color: #B17BC8;
-		display: flex;
-		width: 100%;
-		height: 100%;}
+		width: 100vw;
+		margin: 0;
+		padding: 0;}
 
-	.bloque{display: flex;
+	.bloque{
+		display: flex;
 		align-items: center;
-		width: 33%;}		             
+		width: 33.33%;}		             
 
 		.bloque-img{font-size: 12rem;
+				margin-left: 40px;
 				color: white;
 				width: 100%;} 
 
@@ -203,10 +197,7 @@ a{text-decoration: none;}
 	body {}
 .img-inicio {padding-top: 35px;}
 
-.contenedor{
-		display: block;}
-
-	.bloque{width: 100%;}
+	.bloque{width: 100vw;}
 
 }
 
@@ -221,50 +212,21 @@ a{text-decoration: none;}
 
 /*INFO MIN-1200PX*//*INFO MIN-1200PX*//*INFO MIN-1200PX*//*INFO MIN-1200PX*//*INFO MIN-1200PX*//*INFO MIN-1200PX*//*INFO MIN-1200PX*/
 
-.inf-grid-header{
-	grid-area: inf-grid-header;
-}
-
-.inf-grid-main{
-	grid-area: inf-grid-main;
-}
-
-.inf-grid-aside{
-	grid-area: inf-grid-aside;
-}
-
-.inf-grid-footer{
-	grid-area: inf-grid-footer;
-}
-
-
-.inf-grid{
-	display: grid;
-	grid-template-columns: 80vw 20vw;
-	grid-template-rows: auto;
-	grid-template-areas: 
-	"inf-grid-header inf-grid-header"
-	"inf-grid-main inf-grid-aside"
-	"inf-grid-footer inf-grid-footer";}
-
-
 .inf-grid-main{
 		background-image: url(../img/info.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position: center;
 		margin: 0px;
-		width: 80vw;
 		height: 1200px;
 		padding: 200px 100px;
 		font-size: 3rem;
-		line-height: 46px;}
+		line-height: 6rem;}
 
-	.text-violet{
-			color: red;}
+.info-ul-li{margin-top: 40px;}
 
 .inf-grid-aside{	
 		background-color: #8D8D8D;
-		width: 20vw;
 		font-size: 1.5rem;}
 
 .inf-grid-section{
@@ -273,25 +235,16 @@ a{text-decoration: none;}
 	justify-content: space-between;}		
 
 
-.inf-margin{margin: 20px auto;
-	width: 16vw;
+.inf-margin{margin: 20% 10%;
+	width: 80%;
 	height: 24vh;}
 
 .inf-h2{text-align: center;}
 
 
 
-@media(max-width: 1024px){
+@media(max-width: 1200px){
 	body{}
-	.inf-grid{
-	display: grid;
-	grid-template-columns: 100vw;
-	grid-template-rows: auto;
-	grid-template-areas: 
-	"inf-grid-header"
-	"inf-grid-main"
-	"inf-grid-aside"
-	"inf-grid-footer";}
 
 	.inf-grid-main{
 		width: 100vw;}
@@ -302,22 +255,37 @@ a{text-decoration: none;}
 
 	.inf-grid-section{
 		display: flex;
-		justify-content: space-between;
-		margin: 30px;}	
+		justify-content: center;}	
 
 	.inf-margin{margin: 0;
-		width: 45vw;}	
+		width: 45vw;}		
 
-	.contenedor-footer{
-		height: 100%;
-		width: 100%;
-		padding: 50px 0px;}	
+		
+}
 
+@media(max-width: 992px){
+	body{}
+	
+	.inf-grid-main{
+		padding: 150px 50px;
+		font-size: 2.5rem;}		
 
 }
 
+@media(max-width: 576px){
+	body{}
+
+	.inf-grid-section{
+		display: block;
+		justify-content: center;}
+
+		.inf-margin{margin: 10% 5%;
+		width: 80vw;}
+
+	.info-ul-li{font-size: 2rem;}
 
 
+}
 
 
 
@@ -338,7 +306,7 @@ a{text-decoration: none;}
 		background-image: url(../img/descargar.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: right;
 		margin: 0px;
 		text-align: left;
 		padding: 180px;
@@ -482,36 +450,26 @@ a{text-decoration: none;}
 
 /*INGRESAR MIN-1200PX*//*INGRESAR MIN-1200PX*//*INGRESAR MIN-1200PX*//*INGRESAR MIN-1200PX*//*INGRESAR MIN-1200PX*//*INGRESAR MIN-1200PX*/
 
-
 .main-ingresar{
 		background-image: url(../img/registrar.jpg);
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: end;
 		background-size: cover;
 		margin: 0px;
-		padding: 80px 0;
-		display: flex;
-		align-items: center;
 		justify-content: center;
 
 		width: 100%;
-		height: 1200px;}
+		height: 1600px;}
 
-	.container-reg{
-	  	width: 100vw;
-	  	height: 90vh;
-	  	display: flex;
-	  	justify-content: space-around;
-	  	transition: all .5s ease-out;}
 
-	.welcome-back{
+
+.welcome-back{
+		padding-top: 350px;
 		display: flex;
-		align-items: center;
 		text-align: center;
-		line-height: 8rem;
-		height: 60%;}  
+		line-height: 8rem;}
 
-	.message{
+.message{
 		font-size: 2rem;}	
 
 	.message-button{
@@ -523,18 +481,17 @@ a{text-decoration: none;}
 		cursor: pointer;
 		transition: all .5s;
 		border: none;
-		outline: none;}	
+		outline: none;}
 
 	.message-button:hover{
 		background-color: #6CE3E2;}	
 
 
 		.formulario{
+			margin-top: 300px;
 			width: 400px;
-			height: 60%;
+			height: 35%;
 			border-radius: 1rem;
-			padding: 1.5rem;
-			margin: 2rem;
 			background-color: rgba(51, 51, 51, 0.8);
 			text-align: center;}
 
@@ -551,7 +508,6 @@ a{text-decoration: none;}
 		.formulario input {	
 			font-size: 2rem;
 			display: block;
-			width: 80%;
 			margin: auto;
 			margin-bottom: 5rem;
 			border-radius: 1rem;
@@ -561,7 +517,7 @@ a{text-decoration: none;}
 			border-bottom: white thin solid;}
 
 		.formulario input[type="button"]{
-			width: 60%;
+			
 			margin: auto;
 			margin-top: 30px;
 			border: solid thin white;
@@ -574,64 +530,14 @@ a{text-decoration: none;}
 			transition: 0.5s;}		
 
 
-@media(max-width 768px){
+@media(max-width 992px){
 	body{}
 
-	.container-reg{
-	  	display: block;
-	  	justify-content: center;}
+	.welcome-back{padding-top: 150px;}
 
-	.welcome-back{
-		display: flex;
-		align-items: center;
-		text-align: center;}  
+	.formulario{
+			margin-top: 100px;}
 
-	.message{
-		font-size: 2rem;}	
-
-	.div-formulario{			
-			width: 400px;
-			height: 60%;
-			border-radius: 1rem;
-			padding: 1.5rem;
-			margin: 2rem;
-			background-color: rgba(51, 51, 51, 0.8);
-			text-align: center;}
-
-		.create-account{
-			padding: 4rem;
-			font-size: 3rem;
-			color: white;}
-
-		.cuenta-gratis{
-			font-size: 2rem;
-			color: white;
-			padding: 2.5rem;}
-
-		.formulario input {	
-			font-size: 2rem;
-			display: block;
-			width: 80%;
-			margin: auto;
-			margin-bottom: 5rem;
-			border-radius: 1rem;
-			background-color: white;
-			text-align: center;			
-			border: none;
-			border-bottom: white thin solid;}
-
-		.formulario input[type="button"]{
-			width: 60%;
-			margin: auto;
-			margin-top: 30px;
-			border: solid thin white;
-			padding: 3rem;
-			border-radius: 1rem;
-			cursor: pointer;}
-
-		.formulario input[type="button"]:hover{
-			background-color: ;background-color: #6CE3E2;
-			transition: 0.5s;}	
 }
 
 
